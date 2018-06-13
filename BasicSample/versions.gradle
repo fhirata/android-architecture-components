@@ -39,15 +39,15 @@ versions.dexmaker = "2.2.0"
 versions.constraint_layout = "1.0.2"
 versions.glide = "4.7.1"
 versions.timber = "4.5.1"
-versions.android_gradle_plugin = "3.1.2"
+versions.android_gradle_plugin = "3.2.0-alpha18"
 versions.rxjava2 = "2.1.3"
 versions.rx_android = "2.0.1"
-versions.atsl_runner = "1.0.1"
+versions.atsl_runner = "1.1.0-alpha1"
 versions.atsl_rules = "1.0.1"
 versions.hamcrest = "1.3"
 versions.kotlin = "1.2.41"
 versions.paging = "1.0.0"
-versions.work = "1.0.0-alpha02"
+versions.work = "1.0.0-alpha01"
 versions.navigation = "1.0.0-alpha01"
 def deps = [:]
 
@@ -102,8 +102,9 @@ espresso.intents = "com.android.support.test.espresso:espresso-intents:$versions
 deps.espresso = espresso
 
 def atsl = [:]
-atsl.runner = "com.android.support.test:runner:$versions.atsl_runner"
-atsl.rules = "com.android.support.test:rules:$versions.atsl_runner"
+atsl.runner = "androidx.test:runner:$versions.atsl_runner"
+atsl.rules = "androidx.test:rules:$versions.atsl_runner"
+atsl.orchestrator = "androidx.test:orchestrator:$versions.atsl_runner"
 deps.atsl = atsl
 
 def mockito = [:]
@@ -145,7 +146,6 @@ def work = [:]
 work.runtime = "android.arch.work:work-runtime:$versions.work"
 work.testing = "android.arch.work:work-testing:$versions.work"
 work.firebase = "android.arch.work:work-firebase:$versions.work"
-work.runtime_ktx = "android.arch.work:work-runtime-ktx:$versions.work"
 deps.work = work
 
 def navigation = [:]

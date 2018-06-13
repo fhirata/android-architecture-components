@@ -49,6 +49,12 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+
+    testOptions {
+        animationsDisabled = true
+
+        execution 'ANDROID_TEST_ORCHESTRATOR'
+    }
 }
 
 dependencies {
@@ -68,6 +74,7 @@ dependencies {
     // Android Testing Support Library's runner and rules
     androidTestImplementation deps.atsl.runner
     androidTestImplementation deps.atsl.rules
+    androidTestUtil deps.atsl.orchestrator
     androidTestImplementation deps.room.testing
     androidTestImplementation deps.arch_core.testing
 
